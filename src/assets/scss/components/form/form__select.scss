@@ -1,0 +1,91 @@
+.select {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    &__input {
+        background-color: $white;
+        border: 1px solid $form-border-color;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        .active > & {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .select__light & {
+            background-color: $dark;
+        }
+        input {
+            color: $dark;
+            font-size: 1.1rem;
+            flex: 0 0 auto;
+            max-width: 85%;
+            height: 100%;
+            padding: 0 1rem;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            &:focus-visible, &:focus {
+                outline: 0;
+            }
+            .select__light > & {
+                color: $white;
+            }
+        }
+        &-arrow {
+            flex: 0 0 8px;
+            width: 8px;
+            margin-right: 1.5rem;
+            transition: $transition-base;
+            .active > & {
+                transform: rotate(180deg);
+            }
+            svg {
+                fill: none;
+            }
+        }
+    }
+    &__panel {
+        background-color: $dark;
+        border-radius: 0 0 $border-radius-sm $border-radius-sm;
+        border-left: 1px solid $form-border-color;
+        border-right: 1px solid $form-border-color;
+        border-bottom: 1px solid $form-border-color;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        padding: 1rem .5rem;
+        transition: top .3s ease,
+                    opacity .3s ease;
+        .select__light > & {
+            background-color: $dark;
+        }           
+        .active > & {
+            opacity: 1;
+            pointer-events: auto;
+            visibility: visible;
+        }
+        &-item {
+            
+            border-radius: 3px;
+            padding: 0.344rem 1.125rem;
+            transition: $transition-bg;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba($gray, .1);
+            }
+        }
+    }
+}

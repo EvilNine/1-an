@@ -1,0 +1,67 @@
+.btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2.875rem;
+    padding: 0.688rem 1.25rem;
+    user-select: none;
+    border-radius: 2.875rem;
+    user-select: none;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color .4s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+                background-color .4s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+                border-color .4s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+                box-shadow .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    &__primary {
+        background-color: $primary;
+        color: $white;
+        &:hover {
+            box-shadow: 0px 10px 20px rgba(255, 45, 35, 0.3);
+        }
+    }
+    &__size {
+        &-lg {
+            height: 3.75rem;
+            padding: 1.125rem 2.375rem;
+        }
+    }
+}
+.link {
+    font-size: .875rem;
+    text-decoration: none;
+    svg {
+        fill: none;
+    }
+    
+}
+
+.btn__scrollTop {
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    font-size: .875rem;
+    text-decoration: none;
+    cursor: pointer;
+    &-icon {
+        background-color: $dark-light;
+        border-radius: 30px;
+        width: 30px;
+        height: 30px;
+        margin-left: .875rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            display: block;
+            fill: none;
+        }
+    }
+}

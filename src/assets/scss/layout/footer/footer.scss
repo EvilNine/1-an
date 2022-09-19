@@ -1,0 +1,29 @@
+.footer {
+    padding: 65px 0 90px;
+
+    display: block;
+    &__container {
+        border-top: 1px solid rgba($gray, .1);
+        margin-top: 18px;
+        padding-top: 38px;
+    }
+    &__address {
+        font-size: .875rem;
+        margin: 0;
+    }
+    &__phone {
+        text-decoration: none;
+        color: $dark-light;
+    }
+    &__link {
+        color: $primary;
+        font-size: .875rem;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 1px 0 $primary;
+        transition: $transition-shadow;
+        &:hover {
+            box-shadow: none
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.header {
+    background-color: $dark-light;
+    padding: 20px 0;
+    .container__fluid {
+        display: flex;
+        align-items: center;
+    }
+    .btn__cta {
+        margin-left: auto;
+    }
+}

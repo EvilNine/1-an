@@ -1,0 +1,68 @@
+#map {
+    height: 506px;
+
+}
+
+.ymaps-2-1-79-balloon  {
+    box-shadow: none !important;
+    border-radius: 5px;
+    transform: translate(52px, -21px);
+    & > ymaps {
+        background-color: transparent
+    }
+}
+
+ymaps[class$="-balloon__layout"] {
+    background-color: transparent
+}
+ymaps[class$="-balloon__content"] {
+    // background-color: transparent
+    border-radius: 5px;
+    padding: 30px 40px !important;
+    margin-right: 0 !important;
+}
+ymaps[class$="-balloon__close"] {
+    display: none;
+}
+ymaps[class$="-balloon__tail"] {
+    transform: rotate(0) !important;
+    left: 0 !important;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 34px 34px 0 0;
+    border-color: $white transparent transparent transparent;
+    background:none !important;
+    box-shadow: none !important;
+    &:after {
+        display: none;
+    }
+}
+
+.map {
+    &__title {
+        font-family: $font-family-base;
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        color: $dark-light;
+        margin-bottom: 14px;
+        
+    }
+    &__content {
+        font-family: $font-family-base;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    &__link {
+        color: $primary;
+        font-family: $font-family-base;
+        font-size: 14px;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 1px 0 $primary;
+        transition: $transition-shadow;
+        &:hover {
+            box-shadow: none
+        }
+    }
+}

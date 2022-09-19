@@ -1,0 +1,24 @@
+progress {
+    width: 100%;
+    height: 40px;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    &[value]::-webkit-progress-bar {
+        background-color: rgba($gray, .1);
+        border-radius: $border-radius-lg;
+    }
+    &[value]::-webkit-progress-value {
+        background-color: $dark-light;
+        border-radius: $border-radius-lg;
+    }
+    &::after {
+        content: attr(title)' %';
+        position: absolute;
+        color: $white;
+        top: 50%;
+        left: calc( var(--val) / 2 ) ;
+        transform: translate(-50%, -50%);
+        font-weight: $font-weight-bold;
+    }
+}

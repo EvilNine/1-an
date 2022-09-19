@@ -1,0 +1,13 @@
+.container {
+    max-width: 1250px;
+    padding: 0 $gutter;
+    margin: 0 auto;
+    width: 100%;
+}
+.container__fluid {
+    width: 100%;
+    padding: 0 $gutter;
+    @media (min-width: 1270px) {
+        padding: 0 $gutter-fluid;
+    }
+}

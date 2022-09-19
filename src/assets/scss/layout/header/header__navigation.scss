@@ -1,0 +1,43 @@
+.header__navigation {
+    margin-left: 30px;
+    @media (min-width: 1270px) {
+        margin-left: 150px;
+    }
+    &-list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        gap: 20px;
+        @media (min-width: 768px) {
+            gap: 30px;
+        }
+        @media (min-width: 991px) {
+            gap: 40px;
+        }
+    }
+    &-item {
+        position: relative;
+    }
+    &-link {
+        background-color: transparent;
+        border-radius: $border-radius-lg;
+        color: $white;
+        text-decoration: none;
+        font-weight: $font-weight-bold;
+        padding: 0.625rem 1.25rem;
+        transition: $transition-bg;
+        display: flex;
+        align-items: center;
+        user-select: none;
+        &:hover {
+            background-color: $gray;
+        }
+        .active > & {
+            background-color: $primary;
+        }
+        svg {
+            fill: none;
+        }
+    }
+}

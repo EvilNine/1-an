@@ -1,0 +1,36 @@
+.form__control {
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid $form-border-color;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    padding: $input-padding-y $input-padding-x;
+    font-size: .875rem;
+    font-weight: $font-weight-normal;
+    &-light {
+        color: $dark;
+        &::placeholder {
+            color: $dark;
+        }
+    }
+    &-dark {
+        color: $white;
+        &::placeholder {
+            color: $white;
+        }
+    }
+    &:focus, &:focus-visible {
+        outline: 0;
+    }
+
+    &::-ms-expand {
+        background-color: transparent;
+        border: 0;
+    }
+
+
+    &::placeholder {
+        opacity: 1;
+    }
+}
